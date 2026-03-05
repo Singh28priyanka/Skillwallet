@@ -1,0 +1,58 @@
+# Roles and Responsibilities
+
+## User
+Represents individuals who register on the platform to browse and purchase products.
+
+Responsibilities:
+- Register and login
+- Browse products
+- Add products to cart
+- Place orders
+- Track order history
+
+---
+
+## Admin
+Responsible for managing the platform.
+
+Responsibilities:
+- Manage product categories
+- Upload banner images
+- Add / update / delete products
+- Monitor orders
+- View analytics
+
+---
+
+## Products
+Represents all items available on the platform.
+
+Details stored:
+- Product name
+- Description
+- Price
+- Category
+- Stock availability
+
+---
+
+## Cart
+Stores products added by users before checkout.
+
+Features:
+- Add items
+- Remove items
+- Update quantity
+- View total price
+
+---
+
+## Orders
+Stores all orders placed by users.
+
+Details:
+- User ID
+- Product list
+- Order status
+- Payment status
+- Delivery details
