@@ -79,12 +79,12 @@ export const productsApiSlice = apiSlice.injectEndpoints({
         if (productIndex !== -1) {
           const newReview = {
             _id: Date.now().toString(),
-            name: 'Current User', // A real app would get this from state
+            name: 'Current User', // Real app me ye data Redux state se aayega
             rating: Number(data.rating),
             comment: data.comment,
             createdAt: new Date().toISOString()
           };
-          // Create new array to trigger re-renders
+          // Re-render trigger karne ke liye naya array banaya hai
           const updatedProduct = { ...dummyProducts[productIndex] };
           updatedProduct.reviews = [...(updatedProduct.reviews || []), newReview];
           updatedProduct.numReviews = updatedProduct.reviews.length;

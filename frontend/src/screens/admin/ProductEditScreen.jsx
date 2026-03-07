@@ -49,7 +49,7 @@ const ProductEditScreen = () => {
         category,
         description,
         countInStock,
-      }).unwrap(); // NOTE: here we need to unwrap the Promise to catch any rejection in our catch block
+      }).unwrap(); // Unwrap zaroori hai taki catch block me rejection error catch ho sake
       toast.success('Product updated');
       refetch();
       navigate('/admin/productlist');

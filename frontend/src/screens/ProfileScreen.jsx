@@ -37,9 +37,7 @@ const ProfileScreen = () => {
     } else {
       try {
         const res = await updateProfile({
-          // NOTE: here we don't need the _id in the request payload as this is
-          // not used in our controller.
-          // _id: userInfo._id,
+          // Controller me _id ki zaroorat nahi hai isliye yahan payload me add nahi kiya
           name,
           email,
           password,

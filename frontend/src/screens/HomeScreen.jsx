@@ -19,14 +19,14 @@ const HomeScreen = () => {
     pageNumber,
   });
 
-  // Extract unique categories from data
+  // Data se unique categories nikalne ke liye
   const categories = useMemo(() => {
     if (!data?.products) return ['All Products'];
     const uniqueCats = new Set(data.products.map(p => p.category));
     return ['All Products', ...Array.from(uniqueCats)];
   }, [data]);
 
-  // Filter products based on selected category
+  // Selected category ke hisaab se products filter karne ke liye
   const displayedProducts = useMemo(() => {
     if (!data?.products) return [];
     if (selectedCategory === 'All Products') return data.products;

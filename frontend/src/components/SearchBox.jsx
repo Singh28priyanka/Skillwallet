@@ -7,7 +7,7 @@ const SearchBox = () => {
   const navigate = useNavigate();
   const { keyword: urlKeyword } = useParams();
 
-  // FIX: uncontrolled input - urlKeyword may be undefined
+  // FIX: undefined urlKeyword handle karne ke liye fallback add kiya
   const [keyword, setKeyword] = useState(urlKeyword || '');
 
   const submitHandler = (e) => {

@@ -16,8 +16,7 @@ const authSlice = createSlice({
     },
     logout: (state, action) => {
       state.userInfo = null;
-      // NOTE: here we need to also remove the cart from storage so the next
-      // logged in user doesn't inherit the previous users cart and shipping
+      // Storage se cart remove karna zaroori hai taki agle user ko purana cart data na mile
       localStorage.clear();
     },
   },

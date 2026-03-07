@@ -10,8 +10,7 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     addToCart: (state, action) => {
-      // NOTE: we don't need user, rating, numReviews or reviews
-      // in the cart
+      // Cart me user, rating, numReviews ya reviews ki zaroorat nahi hai
       const { user, rating, numReviews, reviews, ...item } = action.payload;
 
       const existItem = state.cartItems.find((x) => x._id === item._id);
@@ -42,8 +41,7 @@ const cartSlice = createSlice({
       state.cartItems = [];
       localStorage.setItem('cart', JSON.stringify(state));
     },
-    // NOTE: here we need to reset state for when a user logs out so the next
-    // user doesn't inherit the previous users cart and shipping
+    // User ke logout hone par state reset karni padegi taki agle user ko purana cart na dikhe
     resetCart: (state) => (state = initialState),
   },
 });
